@@ -11,7 +11,9 @@
 
 <h3>Reviews:</h3>
 <ul>
-  <li></li>
+  <% @restaurant.reviews.each do |review| %>
+    <li><%= review.content %></li>
+  <% end %>
 </ul>
 
 <%= link_to 'Leave a review', new_restaurant_review_path(@restaurant) %>
